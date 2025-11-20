@@ -76,3 +76,15 @@ sudo nano /etc/nginx/alb.conf
     real_ip_header X-Forwarded-For;
     real_ip_recursive on;
 ```
+
+```bash
+sudo nano /etc/nginx/rewrite/spa.conf
+```
+
+```nginx
+    location / {
+        try_files $uri $uri/ /index.html?$query_string;
+    }
+```
+
+
