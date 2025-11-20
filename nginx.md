@@ -58,10 +58,7 @@ sudo nano /etc/nginx/php8.4.conf
 ```
 
 ```nginx
-    location ~ [^/]\.php(/|$) {
-        try_files $uri =404;
-        fastcgi_index index.php;
-
+    location ~ ^/index\.php(/|$) {
         fastcgi_pass unix:/var/run/php/php8.4-fpm.sock;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include fastcgi_params;
