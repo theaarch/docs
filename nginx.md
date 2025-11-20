@@ -54,16 +54,18 @@ sudo nano /etc/nginx/rewrite/laravel.conf
 ```
 
 ```bash
-sudo nano /etc/nginx/php.conf
+sudo nano /etc/nginx/php8.4.conf
 ```
 
 ```nginx
     location ~ [^/]\.php(/|$) {
         try_files $uri =404;
         fastcgi_index index.php;
-        fastcgi_pass unix:/var/run/php/php-fpm.sock;
+
+        fastcgi_pass unix:/var/run/php/php8.4-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
         include fastcgi_params;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_hide_header X-Powered-By;
     }
 ```
 
