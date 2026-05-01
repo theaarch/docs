@@ -1,5 +1,5 @@
 # MySQL
 
 ```bash
-sudo apt install mysql
+sudo apt install mysql-server
 ```
