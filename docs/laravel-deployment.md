@@ -131,7 +131,7 @@ If your application uses queues, you should use **Supervisor** to keep your queu
 ### 1. Install Supervisor
 
 ```bash
-sudo apt-get install supervisor
+sudo apt install supervisor
 ```
 
 ### 2. Configure Supervisor
