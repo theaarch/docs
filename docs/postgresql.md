@@ -17,7 +17,7 @@ sudo nano /etc/postgresql/18/main/postgresql.conf
 ```
 
 ```
-
+listen_addresses = '*'
 ```
 
 ```bash
