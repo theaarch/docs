@@ -54,6 +54,32 @@ server {
 }
 ```
 
+### Certbot installation and configuration
+
+```bash
+sudo apt update
+sudo apt install certbot python3-certbot-nginx
+```
+
+```bash
+sudo certbot --nginx -d example.com -d www.example.com
+```
+
+```
+server {
+    # ...
+
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    # ...
+}
+```
+
 ## Directory Permissions
 
 Laravel requires write permissions for certain directories to function correctly. Specifically, the `storage` and `bootstrap/cache` directories must be writable by the web server user (usually `www-data`).
