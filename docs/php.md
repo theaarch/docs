@@ -9,6 +9,10 @@ sudo apt install composer
 ```
 
 ```bash
+composer --version
+```
+
+```bash
 whereis composer
 ```
 
