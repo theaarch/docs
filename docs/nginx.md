@@ -9,16 +9,16 @@ sudo nano /etc/nginx/sites-available/example.com
 ```
 
 ```bash
+# Link to sites-enabled
 sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
-```
 
-```bash
+# Test configuration for syntax errors
 sudo nginx -t
+
+# Restart Nginx
+sudo systemctl restart nginx
 ```
 
-```bash
-sudo systemctl reload nginx
-```
 
 ```bash
 getent passwd www-data
