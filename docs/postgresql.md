@@ -27,9 +27,9 @@ sudo systemctl restart postgresql
 
 ```sql
 mysqldump -u root -p myapp > myapp.sql
-mysql -u root -p myapp < myapp.sql
-
 pg_dump -U postgres myapp > myapp.sql
+
+mysql -u root -p myapp < myapp.sql
 psql -U postgres -d myapp < myapp.sql
 
 use database_name;
