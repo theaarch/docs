@@ -19,3 +19,11 @@ sudo nginx -t
 ```bash
 sudo systemctl reload nginx
 ```
+
+```bash
+getent passwd www-data
+```
+
+```
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+```
