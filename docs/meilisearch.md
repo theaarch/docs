@@ -26,10 +26,6 @@ chmod 750 /var/lib/meilisearch
 curl https://raw.githubusercontent.com/meilisearch/meilisearch/latest/config.toml > /etc/meilisearch.toml
 ```
 
-```bash
-nano /etc/meilisearch.toml
-```
-
 ```
 env = "production"
 master_key = "MASTER_KEY"
