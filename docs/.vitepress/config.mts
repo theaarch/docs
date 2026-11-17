@@ -19,8 +19,6 @@ export default defineConfig({
         items: [
           { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' },
-          { text: 'Composer', link: '/composer' },
-          { text: 'Laravel Deployment', link: '/laravel-deployment' }
         ]
       }
     ],
